@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 3caf6009e4fc24fbf8712d3f5ef3da7e56495c26a488df2161218fc34e46019c
 
 build:
-  number: 1
+  number: 2
   script:
     - cythonize plyvel/_plyvel.pyx
     - {{ PYTHON }} -m pip install . -vv
